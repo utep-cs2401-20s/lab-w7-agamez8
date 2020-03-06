@@ -1,12 +1,11 @@
 public class SortOfSort {
     public static void main(String[] args) {
-        int[] array1 = {2, 7, 1, 3, 0, 9, 6, 5};
+        int[] array = {7, 7, -1, -7, -8, 0, 4, 3, 3, -6, 5};
         //6 5 1 0 2 3 7 9
-        sortOfSort(array1);
-        print(array1);
+        sortOfSort(array);
+        print(array);
     }
 
-    //checking
     public static void print(int array[]){
         for (int i = 0; i < array.length; ++i) {
             System.out.print(array[i] + " ");
@@ -17,7 +16,7 @@ public class SortOfSort {
         //variables
         int highIn = array.length-1; //array.length-1 reads the integers that we need
         int lowIn = 0;
-        int swap = 0; //keeps count
+        int swap = 0;
         int value;
         int index;
 
@@ -25,6 +24,8 @@ public class SortOfSort {
         for (int i = 0; i < array.length-1; i++){
             index = i;
             int max = array[lowIn];  //max value is set to min value
+
+            //this for loop
             for (int j = lowIn; j <= highIn; j++) {
                 if (array[j] >= max) {
                     max = array[j];
@@ -46,10 +47,12 @@ public class SortOfSort {
                 lowIn++;
                 swap++;
             }
+
+            //resets
             if(swap == 4){
                 swap = 0;
             }
-        }
+        }//everything goes
     }
 }
 
