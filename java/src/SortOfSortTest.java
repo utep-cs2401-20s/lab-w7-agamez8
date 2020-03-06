@@ -2,4 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortOfSortTest {
 
+    public void sortOfSortTest1(){
+
+    }
 }
